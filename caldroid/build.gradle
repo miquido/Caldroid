@@ -1,18 +1,22 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.2.0'
-    compile 'com.darwinsys:hirondelle-date4j:1.5.1'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation files('libs/hirondelle-date4j-1.5.1.jar')
 }
 
-apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/cc18d56549cdea03f744b6fff27911569394073e/gradle-mvn-push.gradle'
+//apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/cc18d56549cdea03f744b6fff27911569394073e/gradle-mvn-push.gradle'
